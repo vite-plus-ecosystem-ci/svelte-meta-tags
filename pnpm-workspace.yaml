@@ -26,13 +26,15 @@ catalog:
   svelte-check: ^4.7.6
   typescript: ^6.0.3
   typescript-eslint: ^8.71.2
-  vite: npm:@voidzero-dev/vite-plus-core@1.1.0
-  vite-plus: 1.1.0
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.6a30b43184ad1c159091d51d728ee8c249392aa1
+  vite-plus: 0.0.0-commit.6a30b43184ad1c159091d51d728ee8c249392aa1
 overrides:
   vite@*: 'catalog:'
 peerDependencyRules:
   allowAny:
     - vite
+  allowedVersions:
+    vite: '*'
 minimumReleaseAgeExclude:
   # ecosystem-ci smoke test: preview builds and freshly pinned toolchain packages
   - vite-plus
