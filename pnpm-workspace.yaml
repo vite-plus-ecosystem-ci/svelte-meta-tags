@@ -26,8 +26,8 @@ catalog:
   svelte-check: ^4.7.7
   typescript: ^6.0.3
   typescript-eslint: ^8.71.2
-  vite: npm:@voidzero-dev/vite-plus-core@1.1.0
-  vite-plus: 1.1.0
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.6bc2d240a024170c08fbc831f0c201c162afd22e
+  vite-plus: 0.0.0-commit.6bc2d240a024170c08fbc831f0c201c162afd22e
 overrides:
   # takumi 2.16 renamed FontSubset's `ranges`, which blume (as of 2.2.4) still reads; the docs build
   # then fails on the OG images of the Japanese pages. Drop this once blume reads the new field,
@@ -37,6 +37,8 @@ overrides:
 peerDependencyRules:
   allowAny:
     - vite
+  allowedVersions:
+    vite: '*'
 minimumReleaseAgeExclude:
   # ecosystem-ci smoke test: preview builds and freshly pinned toolchain packages
   - vite-plus
